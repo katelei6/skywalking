@@ -17,6 +17,9 @@
 name: E2E
 
 on:
+  push:
+    branches:
+      - test/es8
   pull_request:
   schedule:
     - cron: '0 18 * * *'
@@ -60,6 +63,8 @@ jobs:
           - es-version: 7.14.0
             config-file: storage/es/e2e.yaml
           - es-version: 7.15.0
+            config-file: storage/es/e2e.yaml
+          - es-version: 8.0.0
             config-file: storage/es/e2e.yaml
 
     steps:
